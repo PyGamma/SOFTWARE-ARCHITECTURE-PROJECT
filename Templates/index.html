@@ -1,0 +1,90 @@
+<!DOCType html>
+<html>
+<head>
+    <title>Leaddership Academy of South Sudan</title>
+    <style>
+        #header {
+            width: auto;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            background:#45a049 ;
+            color: #ffc;
+            overflow: hidden;
+            padding-left: 20%;
+            }
+        #main_content{
+            width:70%;
+            align-items: :center;
+            padding:5%;
+            padding-left:15%;
+
+
+        }
+        #footer{
+
+            background:#45a049;
+            width: 100%;
+
+        }
+        button{
+            width: 250px;
+            height: 75px;
+            background-color: #45a049;
+            color: white;
+            border-radius: 4px;
+                   
+        }
+
+        #but_div{
+            padding-left:35%;
+        }
+        table, th, td{
+        padding-top: 2%;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    #Tab{
+        padding-top: 1%;
+        padding-left: 7%;
+
+    }
+    h3{
+        padding-left: 35%;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Leadership Acadmey of South Sudan School System</h1>
+    </div>
+
+    {%block content%}
+        <fieldset>
+            <legend>Welcome, please login or Sign Up</legend>
+                    <div id="but_div">
+                        <form method="POST" action="login">
+                            {%csrf_token%}
+                            <button type="submit">Login</button>
+
+                        </form>
+                        <form method="POST" action="signup">
+                                {%csrf_token%}
+                               <button type="submit">Sign Up</button>
+                        </form>
+                    </div>
+        </fieldset>      
+    {% endblock %}
+    
+    <hr>
+    <div id="footer">
+       
+        @LeadershipAcademy
+    </div>
+</body>
+
+</html>

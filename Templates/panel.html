@@ -1,0 +1,60 @@
+{% extends 'index.html' %}
+
+
+
+{% block content %}
+	<style>
+
+	#PanelLefbar{
+		width: 20%;
+		float: left;
+	}
+
+	#PanelContent{
+		width: 90%;
+		float: left;
+
+	}
+	#PanelRightbar{
+		width: 20%;
+		float: left;
+
+	}
+	button{
+		width: 250px;
+		height: 75px;
+		background-color: #45a049;
+		color: white;
+		border-radius: 6px;
+	}
+	</style>
+<fieldset>
+
+	<center>
+
+		<div id = PanelLefbar>
+			<form method="GET" action="/signup/">
+				<button>Mange User User</button>
+			</form>
+			<form method="POST" action="/admission/">
+				{% csrf_token %}
+				<button>Add student</button>
+			</form>
+			<form method="POST" action="/staff/">
+				{% csrf_token %}
+				<button>Add Staff </button>
+			</form>
+			<form method="POST" action="/ViewStudent/">
+				{% csrf_token %}
+				<button>view Student </button>
+			</form>
+			<form method="POST" action="/ViewStaff/">
+				{% csrf_token %}
+				<button>view Staff </button>
+			</form>
+			
+		</div>
+	</center>
+</fieldset>
+
+{% endblock%}

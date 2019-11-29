@@ -1,0 +1,41 @@
+{% extends 'index.html'%}
+{%block content%}
+<style type="text/css">
+	table{
+		padding-left: 10%;
+		padding-top: 2%;
+	}
+
+</style>
+<h3>LIST OF STAFF OF LEADERSHIP OF SOUTH SUDAN.</h3>
+    <div id="Tab">
+    
+    	<table  width="1150">
+    		<tr>
+    			<td>Student ID</td>
+    			<td>First Name</td>
+    			<td>Last Name</td>
+    			<td>Date of Birth</td>
+    			<td>Telephone</td>
+    			<td>Gender</td>
+    			<td>District</td>
+    			<td>Nationality</td>
+    		</tr>
+    		{%for i in data%}
+    		<tr>
+    			<td>{{i.staff_id}}</td>
+    			<td>{{i.first_name}}</td>
+    			<td>{{i.last_name}}</td>
+    			<td>{{i.b_date}}</td>
+    			<td>{{i.telephone}}</td>
+    			<td>{{i.gender}}</td>
+    			<td>{{i.district}}</td>
+    			<td>{{i.nationality}}</td>
+    		</tr>
+    		{%endfor%}
+    	</table>
+        
+    
+    </div>
+        
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'index.html'%}
+{%block content%}
+<style type="text/css">
+    
+    input[type=submit] {
+    width: 10%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+</style>
+
+<h1 align="center">User Registration</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <div class="form-group">
+        <input type="submit" name="" value="Sign Up">
+    </div>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            Already Have an Accounts? <a class="ml-2" href="login">Login</a>
+        </small>
+    </div>
+    <!--?
+
+    <table align="center" cellpadding = "10">
+
+      --------------------- First Name ----------------------------------------------------------
+        <tr>
+        <td>FIRST NAME</td>
+        <td><input type="text" name="First_Name" maxlength="30"/>
+
+        </td>
+        </tr>
+
+       -- Last Name -------------------------------------------------------
+        <tr>
+        <td>LAST NAME</td>
+        <td><input type="text" name="Last_Name" maxlength="30"/>
+
+        </td>
+        </tr>
+        <tr>
+        <td>EMAIL</td>
+        <td><input type="email" name="user_name" maxlength="50"/>
+        <tr>
+        <tr>
+        <td>USER TYPE</td>
+        <td><input type="text" name="status" maxlength="2"/>
+        <tr>
+
+        <td><input type="submit" value="Sign Up"/>
+
+        </td>
+        </tr>
+
+        </td>
+        </tr>
+    </table>
+    -------------------------------------------------------------------------------------------------------------------------->
+</form>
+
+
+
+{%endblock%}
